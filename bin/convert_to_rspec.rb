@@ -14,6 +14,7 @@ map = {
   /def self.startup/ => '',
   /\s+@@(.*?)\s*\=\s*(.*?)\n/ => '  let(:\1) { \2 }',
   /test(.*)do/ => 'example\1do',
+  /def test_(.*)/ => 'example "\1" do',
   /assert_kind_of\((.*),(.*)\)/m => 'expect(\2).to be_kind_of(\1)',
   /assert_respond_to\((.*),\s+(.*)\)/m => 'expect(\1).to respond_to(\2)',
   /assert_raise\((.*?)\){(.*?)}/m => 'expect{\2}.to raise_error(\1)',
