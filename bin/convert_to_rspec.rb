@@ -8,7 +8,7 @@ ofile = File.basename(file, '.rb') + '_spec.rb'
 
 map = {
   /require 'test-unit'/ => "require 'rspec'",
-  /class TC(.*)\< Test::Unit::TestCase/ => 'describe \1do',
+  /class TC(.*)\< Test::Unit::TestCase/ => 'RSpec.describe \1do',
   /def setup/ => 'before do',
   /def teardown/ => 'after do',
   /test(.*)do/ => 'example\1do',
