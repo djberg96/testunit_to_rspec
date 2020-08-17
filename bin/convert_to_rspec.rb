@@ -4,7 +4,7 @@
 # but a lot less than doing things manually.
 
 file = ARGV.shift.chomp
-ofile = File.basename(file, '.rb') + '_spec.rb'
+ofile = File.basename(file, '.rb').sub(/^test_/, '') + '_spec.rb'
 
 map = {
   /require 'test-unit'/ => "require 'rspec'",
