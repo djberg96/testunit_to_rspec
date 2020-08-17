@@ -26,6 +26,7 @@ map = {
   /assert_nil\((.*)\)/m => 'expect(\1).to be_nil',
   /assert_not_nil\((.*)\)/m => 'expect(\1).not_to be_nil',
   /omit_if\((.*)\)/m => 'skip if \1',
+  /omit_unless\((.*)\)/m => 'skip unless \1',
 }
 
 begin
