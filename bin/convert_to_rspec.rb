@@ -11,6 +11,8 @@ map = {
   /class TC(.*)\< Test::Unit::TestCase/ => 'RSpec.describe \1do',
   /def setup/ => 'before do',
   /def teardown/ => 'after do',
+  /def self.startup/ => '',
+  /\s+@@(.*?)\s*\=\s*(.*?)\n/ => '  let(:\1) { \2 }',
   /test(.*)do/ => 'example\1do',
   /assert_kind_of\((.*),(.*)\)/m => 'expect(\2).to be_kind_of(\1)',
   /assert_respond_to\((.*),\s+(.*)\)/m => 'expect(\1).to respond_to(\2)',
