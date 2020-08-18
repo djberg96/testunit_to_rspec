@@ -19,6 +19,7 @@ map = {
   /assert_respond_to\((.*),\s+(.*)\)/m => 'expect(\1).to respond_to(\2)',
   /assert_raise\((.*?)\){(.*?)}/m => 'expect{\2}.to raise_error(\1)',
   /assert_raises\((.*?)\){(.*?)}/m => 'expect{\2}.to raise_error(\1)',
+  /assert_raise_kind_of\((.*?)\){(.*?)}/m => 'expect{\2}.to raise_error(\1)',
   /assert_nothing_raised{(.*?)}/m => 'expect{\1}.not_to raise_error',
   /assert_true\((.*)\)/m => 'expect(\1).to be true',
   /assert_false\((.*)\)/m => 'expect(\1).to be false',
