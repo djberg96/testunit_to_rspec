@@ -27,7 +27,7 @@ map = {
   /assert_match\((.*),(.*)\)/m => 'expect(\2).to match(\1)',
   /assert_nil\((.*)\)/m => 'expect(\1).to be_nil',
   /assert_not_nil\((.*)\)/m => 'expect(\1).not_to be_nil',
-  /assert_boolean\((.*)\)/m => 'expect(\1).to be_in([true, false])',
+  /assert_boolean\((.*)\)/m => 'expect(\1).to be(true).or be(false)',
   /omit_if\((.*)\)/m => 'skip if \1',
   /omit_unless\((.*)\)/m => 'skip unless \1',
 }
